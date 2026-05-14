@@ -1,0 +1,59 @@
+:root {
+  --color-black:    #0D0D0D;
+  --color-darker:   #2B2B2B;
+  --color-dark:     #404040;
+  --color-medium:   #999999;
+  --color-light:    #CCCCCC;
+  --color-lighter:  #F2F2F2;
+  --color-white:    #FFFFFF;
+
+  --color1-darker:  #A61029;
+  --color1-dark:    #CC1433;
+  --color1-main:    #F23051;
+  --color1-light:   #FC8B9E;
+  --color1-lighter: #FCD7DD;
+
+
+  --color2-darker:  #554D80;
+  --color2-dark:    #665C99;
+  --color2-main:    #897ACC;
+  --color2-light:   #CBC2F2;
+  --color2-lighter: #F9F7FF;
+
+  --gradient-main: linear-gradient(135deg, #897ACC 0%, #CC29A3 50%, #F23051 100%);
+
+
+  --font-body: 'Vladivostok', sans-serif;
+  --font-heading: 'Vladivostok', sans-serif;
+
+  --fs-h1: 76px;
+  --fs-h2: 48px;
+  --fs-h3: 28px;
+  --fs-h4: 20px;
+  --fs-t1: 20px;
+  --fs-t2: 16px;
+  --fs-t3: 14px;
+  --fs-t4: 12px;
+
+  --container-max: 1420px;
+  --container-pad: 32px;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+}
+
+/* Тёмная тема — переопределяем нейтральные цвета (бренд-цвета остаются) */
+[data-theme="dark"] {
+  --color-black:    #FFFFFF;
+  --color-darker:   #F2F2F2;
+  --color-dark:     #CCCCCC;
+  --color-medium:   #999999;
+  --color-light:    #404040;
+  --color-lighter:  #2B2B2B;
+  --color-white:    #0D0D0D;
+
+  --color2-lighter: #1A1828;
+}

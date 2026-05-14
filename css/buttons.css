@@ -1,0 +1,49 @@
+/* Базовая кнопка */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-t3);
+  font-weight: 700;
+  line-height: 1;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Красная кнопка */
+.btn--primary {
+  background: var(--color1-main);
+  color: var(--color-white);
+  width: 169px;
+  height: 48px;
+}
+.btn--primary:hover {
+  background: var(--color1-dark);
+}
+
+/* Чёрная кнопка */
+.btn--secondary {
+  background: var(--color-darker);
+  color: var(--color-white);
+  width: 282px;
+  height: 48px;
+}
+.btn--secondary:hover {
+  background: var(--color-black);
+}
+
+/* Стрелка */
+.btn__arrow-svg {
+  width: 12px;
+  height: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}

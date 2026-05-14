@@ -1,0 +1,99 @@
+.slider-section{
+    padding: 60px 0;
+    width: 100%;
+    background-color: var(--color2-lighter);
+}
+.slider-section_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.slider-section_title {
+    color: var(--color-black);
+    font-size: 48px;
+    font-weight: 700;
+}
+.slider-section_nav {
+    display: flex;
+    gap: 12px;
+}
+.slider-nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--color-white);
+    color: var(--color-black);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 12px;
+}
+.slider-nav-btn:hover {
+    transform: scale(1.05);
+    background: var(--color-lighter);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+/* Основной контейнер слайдера */
+.slider {
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+.slider__track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Карточки слайдов */
+.slider-card {
+    flex-shrink: 0;
+    width: 340px;
+    height: 280px;
+    background: var(--color-white);
+    border-radius: 40px;
+    padding: 40px;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color2-light);
+}
+.slider-card__num {
+    width: 260px;
+    height: 48px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    font-variant-numeric: lining-nums proportional-nums;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/* Линия */
+.slider-card__line {
+    width: 260px;
+    height: 2px;
+    background: var(--color-lighter);
+    margin: 16px 0;
+}
+/* Текст карточки */
+.slide-card__text {
+    width: 260px;
+    height: 72px;
+    font-family: 'Inter', var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color2-dark);
+}
+
+/* В тёмной теме текст внутри карточек делаем светлым */
+[data-theme="dark"] .slide-card__text {
+    color: var(--color2-light);
+}

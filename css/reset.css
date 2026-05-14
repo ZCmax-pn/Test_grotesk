@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* убираем отступы внешние и внутренние у текстоввых тегов и списко. */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+/* убираем точки и цифры */
+ul, ol {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+/* убираем подчеркивание и оставляем цвет */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* убираем у кнопок фон, рамку и стандартный шрифт */
+button {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+input, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+/* плавный скролл */
+html {
+    scroll-behavior: smooth;
+}

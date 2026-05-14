@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Учитываем высоту прилипшего хедера при якорном скролле,
+   чтобы низ хедера не перекрывал начало секции */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-t2);
+  color: var(--color-black);
+  background: var(--color-white);
+  line-height: 1.5;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  width: 100%;
+}
+
+/* Ограничение высоты для hero секции */
+section.hero {
+  min-height: 700px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+}

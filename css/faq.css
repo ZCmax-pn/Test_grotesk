@@ -1,0 +1,97 @@
+/* Секция FAQ */
+.faq {
+    padding: 80px 0;
+    background: var(--color-white);
+}
+
+.faq__title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 48px;
+}
+
+.faq__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.faq__column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Карточка вопрос-ответ */
+.accordion-item {
+    background: var(--color-lighter);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+/* Заголовок */
+.accordion-item__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.accordion-item__head::-webkit-details-marker {
+    display: none;
+}
+.accordion-item__head::marker {
+    display: none;
+    content: '';
+}
+
+.accordion-item__title {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-variant-numeric: lining-nums proportional-nums;
+    color: var(--color-black);
+}
+
+.accordion-item__icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: var(--color-dark);
+    transition: transform 0.3s ease;
+}
+
+.accordion-item__icon::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.accordion-item[open] .accordion-item__icon {
+    transform: rotate(180deg);
+}
+.accordion-item__body {
+    padding: 0 24px 20px;
+    color: var(--color-dark);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.accordion-item__body p {
+    margin: 0;
+}

@@ -1,0 +1,239 @@
+/* Секция формы */
+.form-section {
+    padding: 80px 0;
+    background: var(--color2-lighter);
+    transition: background 0.3s ease;
+}
+
+.form-section > .container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1420px;
+}
+
+.form-section__inner {
+    display: grid;
+    grid-template-columns: 700px 700px;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+/* Общая стилизация обеих карточек */
+.form-section__info,
+.form-section__form {
+    background: var(--color-white);
+    border: 2px solid var(--color2-light);
+    border-radius: 40px;
+    padding: 40px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Левая карточка */
+.form-section__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 364px;
+    width: 700px;
+}
+
+.form-section__title {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.05;
+    color: var(--color2-darker);
+    margin: 0;
+}
+
+.form-section__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.form-section__text--socials {
+    margin-top: auto;
+    font-family: 'Inter', var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    font-variant-numeric: lining-nums proportional-nums;
+    color: var(--color-dark);
+}
+
+.form-section__socials {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--color-lighter);
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+.social-link__icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+.social-link__icon--dark {
+    display: none;
+}
+
+[data-theme="dark"] .social-link__icon--light {
+    display: none;
+}
+[data-theme="dark"] .social-link__icon--dark {
+    display: block;
+}
+
+/* Правая карточка */
+.form-section__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 426px;
+    width: 700px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field__label {
+    font-size: 12px;
+    color: var(--color-medium);
+    padding-left: 4px;
+}
+
+.form-field__input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.form-field__icon {
+    position: absolute;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    flex-shrink: 0;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+[data-theme="dark"] .form-field__icon {
+    filter: invert(1);
+}
+
+.form-field__input {
+    width: 100%;
+    height: 48px;
+    background: var(--color-lighter);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0 16px 0 44px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-black);
+    outline: none;
+    transition: border-color 0.2s, background 0.3s ease;
+}
+
+.form-field__input::placeholder {
+    color: var(--color-medium);
+}
+
+.form-field__input:focus {
+    border-color: var(--color2-main);
+}
+
+/* Чек-бокс*/
+.form-section__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--color-dark);
+    margin-top: 4px;
+    user-select: none;
+}
+
+.form-section__checkbox input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.form-section__checkbox-box {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color1-main);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    transition: background 0.2s;
+}
+
+.form-section__checkbox-box svg {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.form-section__checkbox input:checked + .form-section__checkbox-box {
+    background: var(--color1-main);
+}
+
+.form-section__checkbox input:checked + .form-section__checkbox-box svg {
+    opacity: 1;
+}
+
+.form-section__checkbox input:focus-visible + .form-section__checkbox-box {
+    box-shadow: 0 0 0 3px var(--color1-lighter);
+}
+
+.form-section__checkbox-text {
+    line-height: 1.4;
+}
+
+/* Кнопка отправки  */
+.btn.form-section__submit {
+    align-self: flex-start;
+    width: 195px;
+    height: 48px;
+    padding: 12px 20px 12px 16px;
+    gap: 8px;
+    border-radius: 12px;
+}
+
+.btn.form-section__submit svg {
+    flex-shrink: 0;
+}

@@ -60,6 +60,9 @@
     padding: 40px;
     transition: all 0.3s ease;
     border: 2px solid var(--color2-light);
+    /* контент внутри карточки не должен вылезать за её границы */
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .slider-card__num {
     width: 100%;
@@ -91,6 +94,10 @@
     font-size: 16px;
     line-height: 150%;
     color: var(--color2-dark);
+    /* длинные слова в любом случае разбиваем, чтобы не вылазили */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 /* В тёмной теме текст внутри карточек делаем светлым */

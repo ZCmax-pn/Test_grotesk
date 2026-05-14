@@ -158,9 +158,11 @@
         padding-right: 16px;
     }
 
-    /* Header */
-    .header__inner.container {
-        padding: 16px 0;
+    /* Header — уменьшаем только вертикальный padding,
+       горизонтальный наследуется от .container (16px на мобиле) */
+    .header__inner {
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 
     /* Hero */

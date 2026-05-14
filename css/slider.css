@@ -62,7 +62,7 @@
     border: 2px solid var(--color2-light);
 }
 .slider-card__num {
-    width: 260px;
+    width: 100%;
     height: 48px;
     font-family: var(--font-body);
     font-weight: 700;
@@ -77,15 +77,15 @@
 }
 /* Линия */
 .slider-card__line {
-    width: 260px;
+    width: 100%;
     height: 2px;
     background: var(--color-lighter);
     margin: 16px 0;
 }
 /* Текст карточки */
 .slide-card__text {
-    width: 260px;
-    height: 72px;
+    width: 100%;
+    height: auto;
     font-family: 'Inter', var(--font-body);
     font-weight: 400;
     font-size: 16px;
